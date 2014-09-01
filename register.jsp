@@ -30,11 +30,25 @@ table.inner {
 	border: 0px
 }
 </style>
+<script type="text/javascript">
+function ValidateFields(){
+var firstName=document.getElementsByName("First_Name").value;
+
+if(document.getElementById("registrationform").hasAttribute("First_Name").valueOf()==" ")
+	{
+	alert('Please enter  your Name.');
+	return false;
+	}
+
+
+
+}
+</script>
 </head>
 
 <body>
 	<h3>STUDENT REGISTRATION FORM</h3>
-	<form action="Login.jsp" method="POST">
+	<form id="registrationform"  method="POST">
 
 		<table align="center" cellpadding="10">
 
@@ -228,7 +242,7 @@ table.inner {
 			<!----- Submit and Reset ------------------------------------------------->
 			<tr>
 				<td colspan="2" align="center"><input type="submit"
-					value="Submit"> <input type="reset" value="Reset">
+					value="Submit" onclick="ValidateFields()"> <input type="reset" value="Reset">
 				</td>
 			</tr>
 		</table>
